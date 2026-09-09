@@ -1,0 +1,32 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Every contributor file is a non-empty .md
+        run: |
+          status=0
+          for f in contributors/*; do
+            [ -e "$f" ] || continue
+            case "$f" in
+              *.md) ;;
+              *) echo "::error file=$f::Contributor files must end in .md — rename it to contributors/your-username.md"; status=1; continue ;;
+            esac
+            if [ ! -s "$f" ]; then
+              echo "::error file=$f::$f is empty — add a couple of lines about yourself"
+              status=1
+            fi
+          done
+          if [ "$status" -eq 0 ]; then echo "All contributor files look good."; fi
+          exit $status
