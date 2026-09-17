@@ -22,7 +22,7 @@ If it fails, click **Details**, read the last line, and push a fix to the same b
 
 - One thing per pull request
 - A title that says what changed
-- A sentence of description, and `Closes #N` if it relates to an issue
+- A sentence of description, and a link to the issue it relates to. Use `Closes #N` for an issue only you are solving, so it closes on merge. For this workshop's shared issue #1, write `Part of #1` instead — `Closes` would close it for everyone else on the first merge.
 
 ## Code of conduct
 

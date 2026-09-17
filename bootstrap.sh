@@ -26,7 +26,7 @@ gh repo create "$REPO_NAME" \
 gh label create "good first issue" --color 7057ff --description "Good for newcomers" --force
 gh label create "tapia-2026"       --color 6a3fa0 --description "Tapia 2026 workshop" --force
 
-# Issue #1 — every pull request closes this one
+# Issue #1 — the shared issue every pull request links to (must stay open all session)
 gh issue create \
   --title "Add yourself to contributors/" \
   --label "good first issue" \
@@ -58,7 +58,7 @@ Name the file after your GitHub username, so nobody else is editing the same fil
 
 The seven steps are in the [README](../blob/main/README.md), with both a terminal path and a browser path. Either is fine, and both finish in about the same time.
 
-Put `Closes #1` in your pull request description.
+Put `Part of #1` in your pull request description — not `Closes #1`. Everyone shares this issue, and `Closes` (or `Fixes` / `Resolves`) would auto-close it for the whole room on the first merge. `Part of #1` links your pull request here without closing it.
 
 Stuck for more than two minutes? Flag down a TA. That is what they are there for.
 BODY

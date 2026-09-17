@@ -51,7 +51,9 @@ git commit -m "add contributor file for your-username"
 git push -u origin add-your-username
 ```
 
-**7. Open the pull request.** GitHub shows a green button on your fork. Write a title, a sentence about what you changed, and `Closes #1`.
+**7. Open the pull request.** GitHub shows a green button on your fork. Write a title, a sentence about what you changed, and `Part of #1`.
+
+> **Write `Part of #1`, not `Closes #1`.** Everyone in the room shares issue #1. GitHub automatically closes an issue when a pull request that says `Closes #1` (or `Fixes #1` / `Resolves #1`) is merged — so the first merge would close #1 for everyone still working. `Part of #1` (or `Re #1`) links your pull request to the issue without closing it.
 
 ## If something breaks
 
