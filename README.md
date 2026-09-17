@@ -28,7 +28,7 @@ git clone https://github.com/YOUR-USERNAME/tapia-2026-first-contributions.git
 cd tapia-2026-first-contributions
 ```
 
-Or stay in the browser: on your fork, click any file, then the pencil icon. Every step after this works the same way and you'll finish at the same time.
+Or stay in the browser: on your fork, press **Add file → Create new file** (top right). That opens the editor you'll use for every step after this, and you'll finish at the same time.
 
 **3. Make a branch.**
 
